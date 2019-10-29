@@ -8,7 +8,33 @@ I love the Google suite but hate being limited to having to use their apps withi
 It's one line of code to wrap Google Keep in an app window made possible by [MacGap](https://github.com/MacGapProject/MacGap2)
 
 # Build
-Build using instructions on [MacGap-rb](https://github.com/maccman/macgap-rb)
+
+# Usage
+
+    gem install macgap
+    
+    # macgap new DIR
+    # macgap build DIR
+    
+For example, to create a new MacGap app use the `new` command:
+
+    macgap new MyApp
+    
+To build a MacGap app use the `build` command, specifying the app's directory.
+    
+    macgap build MyApp
+    
+# Advanced
+    
+Or a more advanced example:
+
+    macgap build --name MyApp --output ./build ./public
+
+The directory (`DIR`) you specify should contain a file called `index.html` which will be loaded when the application starts.
+
+# Icon
+
+If the your application's root directory contains a file called `application.png`, that'll be used as the application's icon. 
 
 # Run
 Click the pretty icon :)
